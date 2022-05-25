@@ -3,6 +3,7 @@
         "outDir": "dist/js", // Pasta onde vou salvar a 'tradução';
         "target": "ES6", // Versão do ECMASCRIPT;
         "noEmitOnError": true, // Não permitirá que o compile 'traduza' ou emita um arquivo JS enquanto o nosso TS estiver com erro;
+        "noImplicitAny": true,
     },
 
     "include": ["app/**/*"], // "compilador, inclui aí para mim a pasta "app", toda subpasta e qualquer arquivo, tudo que tiver dentro da "app", que for ".ts" eu quero que você converta e jogue na pasta "dist.js"".

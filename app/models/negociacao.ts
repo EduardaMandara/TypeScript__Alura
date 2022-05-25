@@ -1,30 +1,30 @@
 export class Negociacao {
-    #data; //
-    #quantidade; //
-    #valor; //
+    private _data; //
+    private _quantidade; //
+    private _valor; //
 
     constructor (data, quantidade, valor) {
-        this.#data = data;
-        this.#quantidade = quantidade;
-        this.#valor = valor;
+        this._data = data;
+        this._quantidade = quantidade;
+        this._valor = valor;
     };
 
     // Como os atributos com # a cima são privados, adicionaremos o 'get' para que eles retornem quando solicitados no App.js.
     // Eu não posso atribuir nada a um get, só ler.
     get data() {
-        return this.#data;
+        return this._data;
     };
 
-    get quantdade() {
-        return this.#quantidade;
+    get quantidade() {
+        return this._quantidade;
     };
 
     get valor() {
-        return this.#valor;
+        return this._valor;
     };
 
     get volume() {
-        return this.#quantidade * this.#valor
+        return this._quantidade * this._valor
     };
     
 };

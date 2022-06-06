@@ -1,3 +1,5 @@
+
+
 export class Negociacao {
         constructor (
             private _data: Date, 

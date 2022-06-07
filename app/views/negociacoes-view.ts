@@ -1,4 +1,4 @@
-import { Negociacoes } from "../models/negociacoes.js";
+import { Negociacoes } from '../models/negociacoes.js';
 
 export class NegociacoesView {
 
@@ -18,19 +18,25 @@ export class NegociacoesView {
                     <th>VALOR</th>
                 </tr>
             </thead>
-
             <tbody>
                 ${model.lista().map(negociacao => {
                     return `
-                    <tr>
-                        <td>${new Intl.DateTimeFormat().format(necociacao.data)}</td>
-                        <td>${negociacao.quantidade}</td>
-                        <td>${negociacao.valor}</td>
-                    </tr>
-                    `
+                        <tr>
+                            <td>${new Intl.DateTimeFormat()
+                                .format(negociacao.data)}
+                            </td>
+                            <td>
+                                ${negociacao.quantidade}
+                            </td>
+                            <td>
+                                ${negociacao.valor}
+                            </td>
+                        </tr>
+                    `;
                 }).join('')}
             </tbody>
-        </table>`;
+        </table>
+        `;
     }
 
     update(model: Negociacoes): void {
